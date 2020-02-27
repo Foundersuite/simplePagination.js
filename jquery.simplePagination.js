@@ -143,6 +143,7 @@
 
 		updateItems: function (newItems) {
 			var o = this.data('pagination');
+			if(!o) return;
 			o.items = newItems;
 			o.pages = methods._getPages(o);
 			this.data('pagination', o);
